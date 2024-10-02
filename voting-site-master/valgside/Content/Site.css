@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@600&display=swap');
+
+:root {
+    --party_RODT: #E93746;
+    --party_SV: rgb(255, 133, 133);
+    --party_AP: #F04B54;
+    --party_SP: #81C131;
+    --party_KRF: #67962E;
+    --party_MDG: #f7b780;
+    --party_VENSTRE: #186B5D;
+    --party_HOYRE: #145194;
+    --party_FRP: #6d1b6e83;
+    --party_AL: #F47B20;
+    --party_FI: #CE1669;
+    --party_FP: #0F9DAC;
+    --party_HP: #F47A1A;
+    --party_IT: #FF8800;
+    --party_LB: #49154A;
+    --party_NKP: #E50000;
+    --party_ND: #BA122B;
+    --party_PS: #F9ED14;
+}
+
+@media (width < 1000px) {
+    .partiinfo {
+        display: none !important;
+        opacity: 0;
+    }
+}
+
+h1, h2, p {
+    text-align: center;
+    margin: 0;
+    margin-top: 5vh;}
+.partiLinje h1 {
+    font-family: Rubik;
+    margin-bottom: 5vh;
+    font-size: 6.5vw;}
+.partiLinje h2 {
+    font-family: Rubik;
+    font-weight: lighter;
+    font-size: 2.6vw;
+}
+
+body {
+    background: rgb(224, 222, 222);
+    transition: 550ms;
+    overflow-x: hidden;
+}
+
+.body-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    overflow: hidden;
+    color: #000030;
+    max-width: 100vw;
+}
+
+.lTxt {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #000030;
+}.partiLinje h3 {
+    font-family: 'Red Hat Display', sans-serif;
+    margin-top: 2vh;
+    font-size: 1.8vw;
+}.partiLinje h4 {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 2vh;
+    font-size: 1.8vw;
+} .partiLinje h5 {
+    font-family: 'Red Hat Display', sans-serif !important;
+    font-size: 1.8vw;
+    margin-top: 2vh;
+    font-family: Rubik;
+    cursor: pointer;
+    margin-inline: 16%;
+    transition: 550ms
+} .partiLinje h5 span {
+    font-family: 'Montserrat', sans-serif;
+} .partiLinje h5:hover {
+      scale: 1.05;
+      transition: 550ms
+  }
+
+.komm-fnum {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.FnumBtn, #MainContent_DropDownListKommuner {
+    margin-inline: 2vw;
+    width: 27.5vw;
+    aspect-ratio: 12.5 / 1;
+    border: .3vw solid #000030;
+    border-radius: .5vw;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1vw
+}
+
+#MainContent_pNr {
+    cursor: text !important;
+}
+
+#MainContent_DropDownListKommuner option:nth-child(even) {
+    background-color: rgb(250, 250, 250);
+}
+
+.partiLinje .linje {
+    margin-top: 20px;
+    width: 60vw;
+    aspect-ratio: 30 / 1;
+    background: linear-gradient(to right, red, green, blue);
+    border-radius: 20px;
+    align-content: center;
+    margin-inline: auto;
+}.greyline {
+    background: linear-gradient(to right, grey, white, grey) !important;
+}.partiLinje .linje:hover {
+    background: linear-gradient(to right, red, green, blue);
+    border-radius: 10px;
+    transition: 80000ms;
+    filter: hue-rotate(36000deg);
+    cursor: pointer;
+}
+
+
+.partier, .Epartier {
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-inline: 22vw;
+    justify-content: space-between;
+}.stemKnapp {
+    position: absolute;
+    margin-top: 2vh;
+    margin-left: 0.5vw;
+    background: rgb(176, 255, 154);
+    box-shadow: .3vw .2vw rgb(0, 22, 100);
+    border-radius: 100vw;
+    font-family: Rubik;
+    scale: 1.2;
+    z-index: +5;
+    cursor: pointer;
+    border: none;
+}#B5, #B8 {
+    margin-left: 1.8vw
+}#B16 {
+    margin-left: -.5vw;
+}.partiLinje img {
+    height: 3.5vw;
+    transition: 200ms;
+}.parti1, .parti3, .parti4, .parti5, .parti9 {
+    height: 3.5vw;
+    transition: 200ms;
+}.parti8, .parti7, .parti6, .parti2 {
+    height: 3vw;
+    transition: 200ms;
+}.parti:hover > img, .Eparti:hover > img {
+    scale: 1.1;
+    transition: 800ms;
+    cursor: pointer;
+    transform: rotate(-2.5deg);
+}
+
+.invis {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: -500%;
+}
+
+::selection {
+    background-color: rgba(67, 67, 67, 0.43);
+}
+
+.partiinfo {
+    position: absolute;
+    top: calc(10vw + 10vh);
+    height: 32%;
+    width: 15%;
+    left: 2%;
+    background: rgb(224, 222, 222);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: .5vw;
+    box-shadow: 0px 0px 20px 1px black;
+    transition: 550ms;
+    z-index: 999
+}.partiinfo h1 {
+    font-family: Rubik;
+    text-align: center;
+    font-size: 200%;
+    margin-inline: 5%;
+    font-family: 'Hind', sans-serif;
+    cursor: pointer;
+    word-break: break-all;
+}.partiinfo h4 {
+    font-family: Rubik;
+    text-align: center;
+    font-size: 120%;
+    font-weight: 100;
+    margin-inline: 5%;
+    font-family: 'Hind', sans-serif;
+    overflow: hidden;
+    cursor: pointer;
+}
+.partiinfo .cross {
+    position: absolute;
+    top: 0;
+    left: 15vw;
+    height: 3vw;
+    aspect-ratio: 1 / 1;
+    background: red;
+    cursor: pointer;
+    border-radius: 0 100vw 100vw 0;
+    margin-top: 2vw;
+    transition: 550ms
+}.partiinfo .cross:before, .partiinfo .cross:after {
+    position: absolute;
+    right: 45%;
+    top: 10%;
+    content: ' ';
+    height: 80%;
+    width: 10%;
+    background-color: black;
+}.partiinfo .cross:before {
+    transform: rotate(45deg);
+}.partiinfo .cross:after {
+    transform: rotate(-45deg);
+}
+
+ .partiinfo-open {
+     width: 95%;
+     height: fit-content;
+ }
+ .partiinfo-open > .cross {
+     border-radius: 100vw;
+     left: 2%;
+ }
+
+.results-button {
+    position: absolute;
+    left: 3.5vw;
+    top: 3.5vw;
+    font-size: 6vw;
+    color: green;
+    transition: 800ms
+}
+
+.results-button span {
+    position: absolute;
+    left: -1.5vw;
+    top: 7vw;
+    font-size: 2vw;
+    font-family: Rubik;
+    color: #000030;
+    transition: 800ms;
+}
+
+.results-button:hover {
+    transition: 800ms;
+    color: #000030;
+    top: 3.75vw;
+}
+.results-button:hover > span {
+    transition: 800ms;
+    color: green;
+    top: 6.5vw
+}
+
+/*  All styling for the results page is under this: */
+
+:root {
+    --parti1: 0%; --parti2: 0%; --parti3: 0%; --parti4: 0%; --parti5: 0%; --parti6: 0%; --parti7: 0%; --parti8: 0%; --parti9: 0%;
+    --parti10: 0%; --parti11: 0%; --parti12: 0%; --parti13: 0%; --parti14: 0%; --parti15: 0%; --parti16: 0%; --parti17: 0%; --parti18: 0%;
+}
+
+#resultsPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#resultsPage p {
+    font-family: Rubik;
+    font-weight: lighter;
+    font-size: 3.5vw;
+    margin-bottom: 5vh;
+    width: 70%;
+}
+
+#MainContent_DropDownListKommunerResults {
+    width: 44vw !important;
+    aspect-ratio: 15 / 1;
+    background: #0000307f;
+    border: .3vw solid #000030;
+    border-radius: 1vw 1vw 0 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1vw;
+    font-family: Arial;
+    color: white;
+    font-weight: 500;
+    margin-left: 2vw;
+}
+#MainContent_DropDownListKommunerResults option {
+    text-align: center;
+    cursor: pointer;
+    font-size: 1vw;
+    font-family: Arial;
+    color: white;
+    font-weight: 500;
+}
+
+.linesNames {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.chart .lines {
+    top: 0;
+    background: #0000307f;
+    border-radius: 0 2vw 2vw 0;
+    display: flex;
+    width: 40vw;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    border: solid .5vw #000030;
+}
+
+.chart .lines div {
+    height: 2vw;
+    background: white;
+    border-radius: 0 100vw 100vw 0;
+    margin: auto auto auto 0;
+    overflow: hidden;
+}
+
+.chart .lines div span {
+    display: block;
+    height: 100%;
+    text-align: right;
+    padding-right: 10%;
+    padding-top: 1%;
+    font-size: 1vw;
+    font-family: 'Arial Rounded MT';
+    cursor: pointer;
+}
+
+.chart .pNavn {
+    border-radius: 2vw 0 0 2vw;
+    background: #000030;
+    width: 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid .5vw #000030;
+}
+
+.chart .pNavn img {
+    height: 3vw;
+    margin: auto;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    transition: 200ms;
+}.chart .pNavn img:hover {
+    scale: 1.05;
+    transform: rotate(-4deg);
+    transition: 800ms
+}
+
+.pieChart {
+    display: flex;
+    flex-direction: column;
+    width: 45vw;
+    background: #0000307f;
+    outline: solid .5vw #000030;
+    border-radius: 0 0 2vw 2vw;
+}
+.pie {
+    width: 70%;
+    aspect-ratio: 1 / 1;
+    background: conic-gradient(red, green, blue, green, red);
+    border-radius: 50%;
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-bottom: 5%;
+    outline: solid .5vw #000030;
+}
+
+.pieSide {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-right: 1vw;
+    margin-bottom: 5%;
+    width: 90%;
+}
+
+@media (width < 1600px) {
+    .pieSide {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (width < 1100px) {
+    .pieSide {
+        grid-template-columns: auto;
+    }
+}
+
+.pieSide .party {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5vw
+}
+
+.pieSide .party .ball {
+    border-radius: 50%;
+    background: red;
+    height: 2vw;
+    width: 2vw;
+    margin-top: .5vh
+}
+
+.pieSide .party h1 {
+    margin: 0;
+    margin-left: .5vw;
+    font-family: 'Arial Rounded MT';
+    cursor: default;
+}
+
+.pieSide .party:hover > h1 span {
+    opacity: 1;
+    margin-top: -2.5%;
+    transition: 800ms;
+    display: block;
+}
+
+.pieSide .party h1 span {
+    position: absolute;
+    margin-left: -10%;
+    margin-top: -4%;
+    background: rgb(224, 222, 222);
+    outline: solid .5vw #000030;
+    border-radius: 2vw;
+    opacity: 0;
+    width: 35vw;
+    left: 40vw;
+    cursor: default;
+    pointer-events: none;
+}
